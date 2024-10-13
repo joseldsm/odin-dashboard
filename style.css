@@ -20,6 +20,7 @@ header {
     "searchBar userAccount"
     "userInfos buttons"
     ;
+    gap: 25px;
     padding: 5px 60px;
 }
 
