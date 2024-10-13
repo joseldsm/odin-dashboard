@@ -1,7 +1,7 @@
 body {
     height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 2fr 7fr;
     grid-template-rows: 1fr 5fr;
     grid-template-areas:
     "sidebar header"
@@ -12,14 +12,77 @@ body {
 header {
     background-color: red;
     grid-area: header;
+
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 2fr 3fr;
+    grid-template-areas:
+    "searchBar userAccount"
+    "userInfos buttons"
+    ;
+}
+
+#searchBar {
+    background-color: purple;
+    grid-area: searchBar;
+}
+
+#userAccount {
+    background-color: orange;
+    grid-area: userAccount;
+}
+
+#userInfos {
+    background-color: aquamarine;
+    grid-area: userInfos;
+}
+
+#buttons {
+    background-color: darkgoldenrod;
+    grid-area: buttons;
 }
 
 #sidebar {
     background-color: blue;
     grid-area: sidebar;
+
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+#sidebarHeader {
+    background-color: yellow;
+}
+
+#nav {
+    background-color: pink;
 }
 
 #mainContent {
     background-color: green;
     grid-area: mainContent;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "projects annoncements"
+    "projects trending"
+    ;
 }
+
+#projects {
+    background-color: white;
+    grid-area: projects;
+}
+
+#annoncements {
+    background-color: cadetblue;
+    grid-area: annoncements;
+}
+
+#trending {
+    background-color: black;
+    grid-area: trending;
+}
+
