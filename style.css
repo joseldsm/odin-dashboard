@@ -11,26 +11,35 @@ body {
 }
 
 header {
-    background-color: red;
     grid-area: header;
 
     display: grid;
     grid-template-columns: 3fr 2fr;
-    grid-template-rows: 2fr 3fr;
+    grid-template-rows: 1fr 3fr;
     grid-template-areas:
     "searchBar userAccount"
     "userInfos buttons"
     ;
+    padding: 5px 60px;
 }
 
 #searchBar {
-    background-color: purple;
+    background-color: white;
     grid-area: searchBar;
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 12px;
 }
 
 #userAccount {
-    background-color: orange;
     grid-area: userAccount;
+
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 20px;
 }
 
 #userInfos {
@@ -106,4 +115,21 @@ header {
 .contentDisplay{
     display: grid;
     grid-template-rows: auto 1fr;
+}
+
+input[type="text"] {
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    background-color: lightgrey;
+    padding: 5px 10px;
+    flex-grow: 1;
+}
+
+input[type="text"]:focus {
+    background-color: #f0f0f0;
+}
+
+form::before {
+    content: "\f002";
 }
