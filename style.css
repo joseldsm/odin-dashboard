@@ -270,16 +270,50 @@ input[type="text"]:focus {
 }
 
 #trending {
-    background-color: green;
     grid-area: trending;
 }
 
 #trendingContent {
-    display: grid;
-    grid-template-rows: repeat(4, 1fr);
+    padding: 30px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
 }
 
 .contentDisplay{
     display: grid;
     grid-template-rows: auto 1fr;
 }
+
+.trend {
+    display: grid;
+    grid-template-columns: auto 3fr;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+    "usersPic atName"
+    "usersPic lolName"
+    ;
+    gap: 2px 15px;
+}
+
+.trend>img {
+    max-width: 60px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    grid-area: usersPic;
+}
+
+.trend>p:first-of-type {
+    grid-area: atName;
+    font-weight: bold;
+    align-self: end;
+}
+
+.trend>p:last-of-type {
+    grid-area: lolName;
+    color: grey;
+    font-size: .9rem;
+}
+
